@@ -1,0 +1,80 @@
+# Модули
+from time import sleep
+from sys import stdout
+
+# Вопросы (A, B, C, D, E)
+
+questions = ["Это мужчина ? ", "Этот человек в первой группе (TaRpv19 1) ? ", "У этого человека короткие волосы ? ", "Этот человек высокого роста ? ", "У этого человека хорошее телосложение ? ", "У этого человека натуральный цвет волос ? "]
+
+# Список для Акинатора (https://docs.google.com/spreadsheets/d/1zkOzp9hy0k40BB2c_PaBIbqmkwyClFDuVAcs0OsgsuI/edit?usp=sharing)
+
+# Переменные / Листы
+question_answer_sex = False
+question_answer_hair = [False, False]
+question_answer_bodyType = [False, False]
+question_answer_group = False
+students_list = [" ", "Николь Аасакюла", "Карина Хальзова", "Вероника Ефимова", "Алисса Крупенко", "Софья Варавин", "Яника Вялятага", "Ксения Шарапова", "Карим Башаров", "Сандер Демиховский", "Дмитрий Довженок", "Илья Филатов", "Александр Горбачев", "Матвей Горбенко", "Илья Холмогорцев", "Марк Каарма", "Ростислав Коновалов", "Олег Круглов", "Николас Лаус", "Евгений Львов", "Даниэль Михол", "Владислав Нарожный", "Ярослав Панченко", "Дмитрий Петренко", "Лев Петряков", "Никита Прямов", "Александр Шевченко", "Михаил Шмелев", "Олег Соловей", "Кирилл Шматюк", "Алекс Жаров"]
+
+# Начало программы (монолог Акинатора)
+
+print("Приветствую, я - Акинатор", end="")
+stdout.flush()
+for triple_dot in range (3):
+    print(".", end="")
+    stdout.flush()
+    sleep(1)
+print(" Ну, для бедных", end="")
+stdout.flush()
+for triple_dot in range (3):
+    print(".", end="")
+    stdout.flush()
+    sleep(1)
+sleep(1)
+
+# Начало / цикл программы ("Есть желание играть ?")
+
+def start_ak ():
+    print()
+    while True:
+        game_start = input("Есть желание играть ? (Y/N) ")
+        if game_start == in ["y", "yes", "yep"]:
+            break
+        else:
+            continue
+
+# Основа Акинатора
+
+def asking_q():
+    while True:
+        question_answer_1 = input("Это мужчина? (Y/N): ")
+        if question_answer_1 == "y":
+            question_answer[0] = True
+            break
+        elif question_answer_1 == "n":
+                question_answer[0] = False
+                break
+        else:
+            continue
+
+# Вывод Акинатора
+
+    if question_answer == [True, True, True]:
+        print("Я предполагаю, что ваш персонаж это Лев Петряков.")
+    elif question_answer == [True, True, False]:
+        print("Я предпологаю, что ваш персонаж это Евгений Львов.")
+    elif question_answer == [True, False, False]:
+        print("Я предпологаю, что ваш персонаж это Николас Лаус.")
+    elif question_answer == [False, True, True]:
+        print("Я предпологаю, что ваш персонаж это Ксения Шарапова.")
+    elif question_answer == [False, False, True]:
+        print("Я предпологаю, что ваш персонаж это Николь Аасакюла.")
+    elif question_answer == [False, True, False]:
+        print("Я предпологаю, что ваш персонаж это Карина Хальзова.")
+    else:
+        print("Вероятнее всего, я не знаю кто. :(")
+
+# Алгоритм программы
+
+asking_q()
+
+e = input()
